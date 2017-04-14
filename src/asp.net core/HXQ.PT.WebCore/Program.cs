@@ -15,6 +15,7 @@ namespace HXQ.PT.WebCore
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
+                .UseUrls("http://localhost:5002", "http://*:5003") //外网访问
                 .UseStartup<Startup>()
                 //.UseApplicationInsights()
                 .Build();
